@@ -16,6 +16,7 @@ Core entrypoints:
 
 - `README.md` -- project overview.
 - `docs/CLAIMS.md` -- claim-by-claim evidence map.
+- `docs/DATA_PROVENANCE.md` -- source datasets, transformation steps, and redistribution boundaries.
 - `artifact_manifest.json` -- machine-readable artifact and claim map.
 - `results/move1/layerA_norman.json` -- Norman / GEARS layer-A result artifact.
 - `results/move1/layerA_tahoe.json` -- Tahoe / Arc STATE layer-A result artifact.

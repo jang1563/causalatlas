@@ -17,6 +17,7 @@
     "human_readme": "README.md",
     "claim_map": "docs/CLAIMS.md",
     "reproducibility": "docs/REPRODUCIBILITY.md",
+    "data_provenance": "docs/DATA_PROVENANCE.md",
     "ci_workflow": ".github/workflows/validate.yml",
     "validator": "scripts/validate_public_release.py",
     "main_writeup": "results/move1/MOVE1_WRITEUP_DRAFT.md",
@@ -256,14 +257,10 @@
   "quality_upgrade_plan": [
     {
       "priority": 1,
-      "item": "Add docs/DATA_PROVENANCE.md with source URLs, license terms, transformation steps, and expected regenerated outputs."
-    },
-    {
-      "priority": 2,
       "item": "Create a dedicated Hugging Face dataset for CausalAtlas Move 1 result artifacts if the result layer grows beyond the Verify-or-Trust benchmark dataset."
     },
     {
-      "priority": 3,
+      "priority": 2,
       "item": "Tag a v0.1.0 public release and attach a GitHub release note with the repository commit and dataset snapshot."
     }
   ]
