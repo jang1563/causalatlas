@@ -8,6 +8,12 @@
     "license": "Apache-2.0",
     "description": "Measurement study of causal grounding in LLM-orchestrated single-cell perturbation foundation models."
   },
+  "release": {
+    "version": "0.1.0",
+    "tag": "v0.1.0",
+    "release_url": "https://github.com/jang1563/causalatlas/releases/tag/v0.1.0",
+    "commit": "cdaa578b6d7227a5242a4c0bdf67881ad361e994"
+  },
   "linked_public_artifacts": {
     "verify_or_trust_repository": "https://github.com/jang1563/verify-or-trust",
     "verify_or_trust_dataset": "https://huggingface.co/datasets/jang1563/verify-or-trust",
@@ -258,10 +264,6 @@
     {
       "priority": 1,
       "item": "Create a dedicated Hugging Face dataset for CausalAtlas Move 1 result artifacts if the result layer grows beyond the Verify-or-Trust benchmark dataset."
-    },
-    {
-      "priority": 2,
-      "item": "Tag a v0.1.0 public release and attach a GitHub release note with the repository commit and dataset snapshot."
     }
   ]
 }
