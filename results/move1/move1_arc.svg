@@ -1,0 +1,98 @@
+<svg viewBox="0 0 960 1080" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Move 1 arc: where grounding lives</title>
+  <desc>Five measured limits of an LLM-orchestrated perturbation foundation model converge on one lesson (the lever is the per-input signal and the goal, not model scale, capability, or RL), which then turns constructive: the signal is cheaply buildable and yields near-oracle behavior, giving a deployable recipe.</desc>
+  <rect x="0" y="0" width="960" height="1080" fill="#ffffff"/>
+
+  <!-- title -->
+  <text x="480" y="44" text-anchor="middle" font-size="25" font-weight="700" fill="#1b2733">Move 1 — where grounding lives</text>
+  <text x="480" y="70" text-anchor="middle" font-size="13" fill="#5a6b7b">A measured account of an LLM orchestrating a fallible perturbation foundation model. Posture: MEASURE, not settle.</text>
+
+  <!-- question banner -->
+  <rect x="40" y="88" width="880" height="46" rx="10" fill="#eef2f6" stroke="#cdd8e2"/>
+  <text x="480" y="116" text-anchor="middle" font-size="14.5" font-weight="600" fill="#1b2733">The question: can an LLM ground causal biology by orchestrating a fallible foundation model (FM)?</text>
+
+  <!-- cast -->
+  <text x="480" y="160" text-anchor="middle" font-size="11.5" fill="#5a6b7b">FM = fallible specialist  ·  additive = free baseline (usually right)  ·  verify = costly real experiment  ·  LLM = the orchestrator</text>
+  <!-- color legend -->
+  <rect x="300" y="176" width="12" height="12" rx="2" fill="#fdf0ec" stroke="#e8b9a8"/>
+  <text x="318" y="186" font-size="11" fill="#5a6b7b">warm = a measured limit</text>
+  <rect x="498" y="176" width="12" height="12" rx="2" fill="#e9f6ee" stroke="#a9d8bd"/>
+  <text x="516" y="186" font-size="11" fill="#5a6b7b">cool = the constructive fix</text>
+
+  <!-- FINDING ROWS (warm) -->
+  <!-- A -->
+  <g transform="translate(40,202)">
+    <rect x="0" y="0" width="880" height="84" rx="10" fill="#fdf0ec" stroke="#e8b9a8"/>
+    <text x="22" y="28" font-size="12.5" font-weight="700" fill="#b4471f">A · Foundation model</text>
+    <rect x="676" y="14" width="184" height="24" rx="12" fill="#f6d9cd"/>
+    <text x="768" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3a14">narrow win only</text>
+    <text x="22" y="53" font-size="14" font-weight="700" fill="#1b2733">Is the foundation model any good?</text>
+    <text x="22" y="73" font-size="12" fill="#5a6b7b">Beats the free additive baseline ONLY on the narrow synergy slice; loses the easy majority to it.</text>
+  </g>
+  <!-- B -->
+  <g transform="translate(40,298)">
+    <rect x="0" y="0" width="880" height="84" rx="10" fill="#fdf0ec" stroke="#e8b9a8"/>
+    <text x="22" y="28" font-size="12.5" font-weight="700" fill="#b4471f">B · Orchestration</text>
+    <rect x="676" y="14" width="184" height="24" rx="12" fill="#f6d9cd"/>
+    <text x="768" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3a14">can't self-estimate</text>
+    <text x="22" y="53" font-size="14" font-weight="700" fill="#1b2733">Can the LLM tell when to trust it?</text>
+    <text x="22" y="73" font-size="12" fill="#5a6b7b">Flags FM errors at just AUC 0.57; over-verifies — the stronger model is the WORSE orchestrator under cost.</text>
+  </g>
+  <!-- C -->
+  <g transform="translate(40,394)">
+    <rect x="0" y="0" width="880" height="84" rx="10" fill="#fdf0ec" stroke="#e8b9a8"/>
+    <text x="22" y="28" font-size="12.5" font-weight="700" fill="#b4471f">C · Free default (3-tier)</text>
+    <rect x="676" y="14" width="184" height="24" rx="12" fill="#f6d9cd"/>
+    <text x="768" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3a14">never finds it</text>
+    <text x="22" y="53" font-size="14" font-weight="700" fill="#1b2733">Does it find the obvious cheap move?</text>
+    <text x="22" y="73" font-size="12" fill="#5a6b7b">Never defaults to the free baseline (+14 free); the cheap default has to be engineered in.</text>
+  </g>
+  <!-- D -->
+  <g transform="translate(40,490)">
+    <rect x="0" y="0" width="880" height="84" rx="10" fill="#fdf0ec" stroke="#e8b9a8"/>
+    <text x="22" y="28" font-size="12.5" font-weight="700" fill="#b4471f">D · Training (RL)</text>
+    <rect x="676" y="14" width="184" height="24" rx="12" fill="#f6d9cd"/>
+    <text x="768" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3a14">knowing–doing gap</text>
+    <text x="22" y="53" font-size="14" font-weight="700" fill="#1b2733">Can training fix the policy?</text>
+    <text x="22" y="73" font-size="12" fill="#5a6b7b">RL collapses to "trust everything" — the signal lives in the hidden states, not the behavior.</text>
+  </g>
+  <!-- E -->
+  <g transform="translate(40,586)">
+    <rect x="0" y="0" width="880" height="84" rx="10" fill="#fdf0ec" stroke="#e8b9a8"/>
+    <text x="22" y="28" font-size="12.5" font-weight="700" fill="#b4471f">E · Experiment choice</text>
+    <rect x="676" y="14" width="184" height="24" rx="12" fill="#f6d9cd"/>
+    <text x="768" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="#9a3a14">goal-dependent</text>
+    <text x="22" y="53" font-size="14" font-weight="700" fill="#1b2733">Can it pick the next experiment?</text>
+    <text x="22" y="73" font-size="12" fill="#5a6b7b">2.7x better for hit-discovery, but LOSES to random for uniform mapping. The goal is the lever.</text>
+  </g>
+
+  <!-- chevron to lesson -->
+  <path d="M474,676 l6,8 l6,-8" fill="none" stroke="#b4471f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- LESSON spine (dark) -->
+  <rect x="40" y="690" width="880" height="58" rx="10" fill="#1b2733"/>
+  <text x="480" y="717" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">One phenomenon, five times: the lever is the per-input COMPETENCE / VALUE signal — and the GOAL.</text>
+  <text x="480" y="737" text-anchor="middle" font-size="12" fill="#aebfcf">Not model scale.  Not agent capability.  Not naive RL.</text>
+
+  <!-- chevron to turn -->
+  <path d="M474,758 l6,8 l6,-8" fill="none" stroke="#1c7a44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- TURN (green) -->
+  <rect x="40" y="772" width="880" height="96" rx="10" fill="#e9f6ee" stroke="#a9d8bd"/>
+  <text x="22" y="800" transform="translate(40,0)" font-size="12.5" font-weight="700" fill="#1c7a44">THE TURN — the bottleneck is engineerable, not fundamental</text>
+  <text x="62" y="826" font-size="14" font-weight="600" fill="#1b2733">Distrust the FM exactly where it disagrees with the free baseline.</text>
+  <text x="62" y="850" font-size="12.5" fill="#3f6b51">Competence signal AUC 0.70 → 0.88 (cheap, inference-available) → near-oracle at a 10% verify-budget.</text>
+
+  <!-- chevron to recipe -->
+  <path d="M474,878 l6,8 l6,-8" fill="none" stroke="#1f5fbf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- RECIPE (blue) -->
+  <rect x="40" y="892" width="880" height="98" rx="10" fill="#eaf1fd" stroke="#b4ccef"/>
+  <text x="62" y="920" font-size="12.5" font-weight="700" fill="#1f5fbf">DEPLOYABLE RECIPE — measured end to end</text>
+  <text x="62" y="946" font-size="13.5" font-weight="600" fill="#1b2733">1 · default to additive (free)       2 · flag where FM deviates (0.88)       3 · verify the top ~10%</text>
+  <text x="62" y="970" font-size="12" fill="#3f5170">→ near-oracle accuracy at low cost.   No LLM self-estimation  ·  no RL  ·  no privileged information.</text>
+
+  <!-- footer -->
+  <text x="480" y="1018" text-anchor="middle" font-size="12" font-weight="600" fill="#1b2733">Capability = Safety: an orchestrator that knows when its tool is wrong is both more useful and safer.</text>
+  <text x="480" y="1038" text-anchor="middle" font-size="11.5" fill="#5a6b7b">Remaining frontier: the online closed-loop experiment (resource-blocked).</text>
+</svg>

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jang1563/causalatlas/schemas/layerA_norman.schema.json",
+  "title": "CausalAtlas Layer-A Norman Result",
+  "type": "object",
+  "required": [
+    "primary_delta",
+    "B_boot",
+    "combo",
+    "single",
+    "pds",
+    "delta_sweep"
+  ],
+  "properties": {
+    "primary_delta": {
+      "type": "number"
+    },
+    "B_boot": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "combo": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/norman_stratum"
+      }
+    },
+    "single": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/norman_stratum"
+      }
+    },
+    "pds": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number"
+        }
+      }
+    },
+    "delta_sweep": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/$defs/estimate_ci"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "estimate_ci": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      },
+      "description": "[estimate, ci_low, ci_high]"
+    },
+    "norman_stratum": {
+      "type": "object",
+      "required": [
+        "nP",
+        "nE"
+      ],
+      "properties": {
+        "nP": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nE": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/estimate_ci"
+          },
+          {
+            "type": "integer",
+            "minimum": 0
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    }
+  }
+}

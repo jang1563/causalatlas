@@ -1,0 +1,46 @@
+# caches / OS
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+/tmp/
+
+# local-only excluded files
+_private/
+
+# large / regenerated data artifacts — regenerate via the pipeline (see README "Data")
+*.h5ad
+*.npy
+*.npz
+*.pt
+*.pkl
+*.pickle
+*.parquet
+*.csv
+*.tsv
+*.jsonl
+*.zip
+*.tar.gz
+*.gz
+*.png
+*.pdf
+data/raw/
+data/cache/
+
+# run logs / outputs (not part of the released study)
+*.log
+runs/
+results/_metrics/
+results/*/agent_eval/
+results/gears_norman/p6_t1*/
+results/norman_gi_full/
+results/tahoe_xctx/
+results/cross_line_consistency*/
+
+# excluded local runtime / infrastructure files
+*.slurm
+*.sbatch
+eval/run_*.sh
+eval/p1_*.py
+eval/p6_*.py
+eval/harness/

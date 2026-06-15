@@ -1,0 +1,270 @@
+{
+  "schema_version": "0.3.0",
+  "generated_date": "2026-06-15",
+  "project": {
+    "name": "CausalAtlas",
+    "repository": "https://github.com/jang1563/causalatlas",
+    "default_branch": "main",
+    "license": "Apache-2.0",
+    "description": "Measurement study of causal grounding in LLM-orchestrated single-cell perturbation foundation models."
+  },
+  "linked_public_artifacts": {
+    "verify_or_trust_repository": "https://github.com/jang1563/verify-or-trust",
+    "verify_or_trust_dataset": "https://huggingface.co/datasets/jang1563/verify-or-trust",
+    "grounding_atlas_repository": "https://github.com/jang1563/grounding-atlas"
+  },
+  "entrypoints": {
+    "human_readme": "README.md",
+    "claim_map": "docs/CLAIMS.md",
+    "reproducibility": "docs/REPRODUCIBILITY.md",
+    "ci_workflow": ".github/workflows/validate.yml",
+    "validator": "scripts/validate_public_release.py",
+    "main_writeup": "results/move1/MOVE1_WRITEUP_DRAFT.md",
+    "synthesis": "results/move1/MOVE1_SYNTHESIS.md",
+    "one_page_arc": "results/move1/move1_arc.svg"
+  },
+  "data_policy": {
+    "redistributes_third_party_raw_data": false,
+    "small_result_artifacts_in_repo": true,
+    "raw_data_regenerated_from_public_sources": true,
+    "external_dataset_home": "https://huggingface.co/datasets/jang1563/verify-or-trust"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "short_name": "foundation_model_regime_map",
+      "statement": "GEARS loses to observed-additive in aggregate on held-out Norman combo edges but wins on the non-additive synergy subset.",
+      "primary_metric": "edge_AUROC",
+      "key_results": {
+        "heldout_all_combos": {
+          "GEARS_AUROC": 0.790,
+          "ADD_AUROC": 0.897,
+          "GEARS_minus_ADD": -0.107
+        },
+        "heldout_synergy_edges": {
+          "GEARS_AUROC": 0.749,
+          "ADD_AUROC": 0.606,
+          "GEARS_minus_ADD": 0.142,
+          "ci95": [
+            0.050,
+            0.233
+          ]
+        }
+      },
+      "evidence_files": [
+        "results/move1/RESULT_layerA.md",
+        "results/move1/layerA_norman.json"
+      ],
+      "code_files": [
+        "eval/move1_layerA.py",
+        "eval/move1_gears_cv.py",
+        "eval/move1_synergy_cv.py"
+      ]
+    },
+    {
+      "id": "C2",
+      "short_name": "tahoe_state_metric_split",
+      "statement": "Arc STATE / Tahoe falls below the no-change floor on novel-drug edge-call accuracy, while cosine-PDS remains favorable.",
+      "primary_metric": "call_accuracy_at_delta_0.25",
+      "key_results": {
+        "STATE_accuracy": 0.732,
+        "no_change_accuracy": 0.805,
+        "STATE_edge_AUROC": 0.439,
+        "STATE_cosine_PDS": 0.793
+      },
+      "evidence_files": [
+        "results/move1/RESULT_layerA.md",
+        "results/move1/layerA_tahoe.json"
+      ],
+      "code_files": [
+        "eval/move1_layerA_tahoe.py"
+      ]
+    },
+    {
+      "id": "C3",
+      "short_name": "verification_allocation_failure",
+      "statement": "LLM orchestration is limited by per-input reliability allocation; models follow a supplied reliability signal but do not self-generate it reliably.",
+      "primary_metric": "FM_wrong_allocation_AUC_and_net_reward",
+      "linked_benchmark": "https://github.com/jang1563/verify-or-trust",
+      "linked_dataset": "https://huggingface.co/datasets/jang1563/verify-or-trust",
+      "evidence_files": [
+        "results/move1/MOVE1_SYNTHESIS.md",
+        "results/move1/MOVE1_WRITEUP_DRAFT.md"
+      ],
+      "code_files": []
+    },
+    {
+      "id": "C4",
+      "short_name": "three_tier_default_to_baseline",
+      "statement": "Adding the free additive baseline creates a three-tier decision problem; tested frontier LLMs do not discover the default-to-baseline move unaided.",
+      "primary_metric": "net_reward_at_lambda_0.5",
+      "key_results": {
+        "always_additive_net": 0.802,
+        "trust_all_FM_net": 0.661,
+        "haiku_net": 0.725,
+        "sonnet_net": 0.722,
+        "opus_net": 0.730
+      },
+      "evidence_files": [
+        "results/move1/MOVE1_3TIER_RESULT.md"
+      ],
+      "code_files": [
+        "eval/move1_3tier_baselines.py",
+        "eval/move1_3tier_router.py",
+        "eval/move1_3tier_env.py"
+      ]
+    },
+    {
+      "id": "C5",
+      "short_name": "experiment_selection_goal_dependence",
+      "statement": "Experiment selection is goal-dependent: informed selection helps hit-discovery but hurts uniform map reconstruction.",
+      "primary_metric": "AULC_and_recall_at_budget",
+      "key_results": {
+        "uniform_mapping_informed_minus_random_AULC": -0.018,
+        "hit_discovery_recall_lift_vs_random": 2.7
+      },
+      "evidence_files": [
+        "results/move1/EXPSEL_DESIGN.md"
+      ],
+      "code_files": [
+        "eval/move1_expsel.py",
+        "eval/move1_expsel_checks.py",
+        "eval/move1_replogle_prep.py"
+      ]
+    },
+    {
+      "id": "C6",
+      "short_name": "engineerable_competence_signal",
+      "statement": "The per-input competence signal is the bottleneck, but additive-disagreement features make it substantially stronger and useful for low-budget verification allocation.",
+      "primary_metric": "FM_error_prediction_AUC",
+      "key_results": {
+        "weak_signal_regime_AUC_range": [
+          0.67,
+          0.73
+        ],
+        "additive_disagreement_AUC": 0.88
+      },
+      "evidence_files": [
+        "results/move1/MOVE1_SYNTHESIS.md",
+        "results/move1/MOVE1_WRITEUP_DRAFT.md"
+      ],
+      "code_files": [
+        "eval/move1_competence_uq.py",
+        "eval/move1_competence_close.py"
+      ]
+    }
+  ],
+  "result_artifacts": [
+    {
+      "path": "results/move1/layerA_norman.json",
+      "type": "json",
+      "schema": "schemas/layerA_norman.schema.json",
+      "strict_json": true,
+      "description": "Norman / GEARS layer-A model-vs-baseline result table."
+    },
+    {
+      "path": "results/move1/layerA_tahoe.json",
+      "type": "json",
+      "schema": "schemas/layerA_tahoe.schema.json",
+      "strict_json": true,
+      "description": "Tahoe / Arc STATE layer-A result table."
+    },
+    {
+      "path": "results/move1/move1_arc.svg",
+      "type": "svg",
+      "description": "One-page visual arc of the Move 1 study."
+    }
+  ],
+  "schema_files": [
+    {
+      "path": "schemas/artifact_manifest.schema.json",
+      "type": "json_schema",
+      "description": "Schema for the machine-readable CausalAtlas artifact manifest."
+    },
+    {
+      "path": "schemas/layerA_norman.schema.json",
+      "type": "json_schema",
+      "description": "Schema for the Norman / GEARS layer-A result artifact."
+    },
+    {
+      "path": "schemas/layerA_tahoe.schema.json",
+      "type": "json_schema",
+      "description": "Schema for the Tahoe / Arc STATE layer-A result artifact."
+    }
+  ],
+  "validation": {
+    "workflow": ".github/workflows/validate.yml",
+    "local_command": "python3 scripts/validate_public_release.py",
+    "checks": [
+      "strict_json",
+      "manifest_paths",
+      "result_artifact_schema_links",
+      "public_file_set",
+      "public_text_guard"
+    ]
+  },
+  "pipeline_files": [
+    {
+      "path": "eval/01_prep_norman.py",
+      "stage": "data_preparation"
+    },
+    {
+      "path": "eval/01_prep_replogle.py",
+      "stage": "data_preparation"
+    },
+    {
+      "path": "eval/02_run_sceptre.R",
+      "stage": "ground_truth_testing"
+    },
+    {
+      "path": "eval/02_sceptre_norman.R",
+      "stage": "ground_truth_testing"
+    },
+    {
+      "path": "eval/03_classify_edges.py",
+      "stage": "edge_labeling"
+    },
+    {
+      "path": "eval/03_gi_classify.py",
+      "stage": "interaction_labeling"
+    },
+    {
+      "path": "eval/04_label_tahoe.py",
+      "stage": "tahoe_labeling"
+    },
+    {
+      "path": "eval/05_tahoe_xctx.py",
+      "stage": "cross_context_analysis"
+    },
+    {
+      "path": "eval/05b_tahoe_xctx_corrected.py",
+      "stage": "cross_context_analysis"
+    },
+    {
+      "path": "eval/06_gears_norman.py",
+      "stage": "foundation_model_prediction"
+    },
+    {
+      "path": "eval/06b_gears_predict_all.py",
+      "stage": "foundation_model_prediction"
+    },
+    {
+      "path": "eval/07_state_vcc.py",
+      "stage": "state_vcc_substrate"
+    }
+  ],
+  "quality_upgrade_plan": [
+    {
+      "priority": 1,
+      "item": "Add docs/DATA_PROVENANCE.md with source URLs, license terms, transformation steps, and expected regenerated outputs."
+    },
+    {
+      "priority": 2,
+      "item": "Create a dedicated Hugging Face dataset for CausalAtlas Move 1 result artifacts if the result layer grows beyond the Verify-or-Trust benchmark dataset."
+    },
+    {
+      "priority": 3,
+      "item": "Tag a v0.1.0 public release and attach a GitHub release note with the repository commit and dataset snapshot."
+    }
+  ]
+}

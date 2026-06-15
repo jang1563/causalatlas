@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jang1563/causalatlas/schemas/artifact_manifest.schema.json",
+  "title": "CausalAtlas Artifact Manifest",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_date",
+    "project",
+    "linked_public_artifacts",
+    "entrypoints",
+    "claims",
+    "result_artifacts",
+    "pipeline_files",
+    "quality_upgrade_plan"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_date": {
+      "type": "string"
+    },
+    "project": {
+      "type": "object",
+      "required": [
+        "name",
+        "repository",
+        "default_branch",
+        "license",
+        "description"
+      ]
+    },
+    "linked_public_artifacts": {
+      "type": "object"
+    },
+    "entrypoints": {
+      "type": "object"
+    },
+    "data_policy": {
+      "type": "object"
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    },
+    "result_artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/file_artifact"
+      }
+    },
+    "pipeline_files": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/pipeline_file"
+      }
+    },
+    "schema_files": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/file_artifact"
+      }
+    },
+    "quality_upgrade_plan": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "priority",
+          "item"
+        ],
+        "properties": {
+          "priority": {
+            "type": "integer"
+          },
+          "item": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "required": [
+        "id",
+        "short_name",
+        "statement",
+        "primary_metric",
+        "evidence_files",
+        "code_files"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "short_name": {
+          "type": "string"
+        },
+        "statement": {
+          "type": "string"
+        },
+        "primary_metric": {
+          "type": "string"
+        },
+        "key_results": {
+          "type": "object"
+        },
+        "linked_benchmark": {
+          "type": "string"
+        },
+        "linked_dataset": {
+          "type": "string"
+        },
+        "evidence_files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "code_files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "file_artifact": {
+      "type": "object",
+      "required": [
+        "path",
+        "type",
+        "description"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string"
+        },
+        "strict_json": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "pipeline_file": {
+      "type": "object",
+      "required": [
+        "path",
+        "stage"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "stage": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

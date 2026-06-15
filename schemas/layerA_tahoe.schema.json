@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jang1563/causalatlas/schemas/layerA_tahoe.schema.json",
+  "title": "CausalAtlas Layer-A Tahoe Result",
+  "type": "object",
+  "required": [
+    "n_pert",
+    "n_edge",
+    "no_effect_base_rate",
+    "primary_delta",
+    "acc",
+    "auroc",
+    "pds"
+  ],
+  "properties": {
+    "n_pert": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "n_edge": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "no_effect_base_rate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "primary_delta": {
+      "type": "number"
+    },
+    "acc": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/estimate_ci"
+      }
+    },
+    "auroc": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/estimate_ci_nullable"
+      }
+    },
+    "pds": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    }
+  },
+  "$defs": {
+    "number_or_null": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "estimate_ci": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      },
+      "description": "[estimate, ci_low, ci_high]"
+    },
+    "estimate_ci_nullable": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "$ref": "#/$defs/number_or_null"
+      },
+      "description": "[estimate, ci_low, ci_high], with null for undefined intervals"
+    }
+  }
+}
