@@ -9,14 +9,13 @@
     "description": "Measurement study of causal grounding in LLM-orchestrated single-cell perturbation foundation models."
   },
   "release": {
-    "version": "0.1.0",
-    "tag": "v0.1.0",
-    "release_url": "https://github.com/jang1563/causalatlas/releases/tag/v0.1.0",
-    "commit": "cdaa578b6d7227a5242a4c0bdf67881ad361e994"
+    "version": "0.1.1",
+    "tag": "v0.1.1",
+    "release_url": "https://github.com/jang1563/causalatlas/releases/tag/v0.1.1",
+    "canonical_revision": "Git tag v0.1.1"
   },
   "linked_public_artifacts": {
     "causalatlas_move1_dataset": "https://huggingface.co/datasets/jang1563/causalatlas-move1",
-    "causalatlas_move1_dataset_snapshot": "https://huggingface.co/datasets/jang1563/causalatlas-move1/commit/e476c3b1416a37c13dcb4482f6ddfc43f09e8786",
     "verify_or_trust_repository": "https://github.com/jang1563/verify-or-trust",
     "verify_or_trust_dataset": "https://huggingface.co/datasets/jang1563/verify-or-trust",
     "grounding_atlas_repository": "https://github.com/jang1563/grounding-atlas"
