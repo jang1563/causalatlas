@@ -9,10 +9,10 @@
     "description": "Measurement study of causal grounding in LLM-orchestrated single-cell perturbation foundation models."
   },
   "release": {
-    "version": "0.1.1",
-    "tag": "v0.1.1",
-    "release_url": "https://github.com/jang1563/causalatlas/releases/tag/v0.1.1",
-    "canonical_revision": "Git tag v0.1.1"
+    "version": "0.1.2",
+    "tag": "v0.1.2",
+    "release_url": "https://github.com/jang1563/causalatlas/releases/tag/v0.1.2",
+    "canonical_revision": "Git tag v0.1.2"
   },
   "linked_public_artifacts": {
     "causalatlas_move1_dataset": "https://huggingface.co/datasets/jang1563/causalatlas-move1",
@@ -26,6 +26,7 @@
     "reproducibility": "docs/REPRODUCIBILITY.md",
     "data_provenance": "docs/DATA_PROVENANCE.md",
     "archival_metadata": ".zenodo.json",
+    "archival_release_notes": "docs/ARCHIVAL_RELEASE.md",
     "ci_workflow": ".github/workflows/validate.yml",
     "validator": "scripts/validate_public_release.py",
     "main_writeup": "results/move1/MOVE1_WRITEUP_DRAFT.md",
@@ -266,7 +267,7 @@
   "quality_upgrade_plan": [
     {
       "priority": 1,
-      "item": "Mint a DOI-backed archival snapshot once the next frozen public release is ready."
+      "item": "Add DOI badge and citation identifiers after Zenodo mints a DOI for the frozen GitHub release."
     }
   ]
 }

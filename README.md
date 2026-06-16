@@ -67,5 +67,6 @@ The processed GEARS/Norman substrate + a cell subset for the live assay are publ
   program (train / retrieve / orchestrate decision map).
 
 ## Citation & license
-See [`CITATION.cff`](CITATION.cff) and [`.zenodo.json`](.zenodo.json) for citation and archival metadata.
+See [`CITATION.cff`](CITATION.cff), [`.zenodo.json`](.zenodo.json), and
+[`docs/ARCHIVAL_RELEASE.md`](docs/ARCHIVAL_RELEASE.md) for citation and archival metadata.
 Code is Apache-2.0; third-party data retains its own license (see **Data**). A preprint is in preparation.

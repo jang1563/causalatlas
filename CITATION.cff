@@ -4,7 +4,7 @@ title: "CausalAtlas: where causal grounding lives in LLM-orchestrated perturbati
 authors:
   - family-names: Kim
     given-names: JangKeun
-version: 0.1.1
+version: 0.1.2
 date-released: 2026-06-16
 license: Apache-2.0
 abstract: >
