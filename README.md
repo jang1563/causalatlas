@@ -1,6 +1,7 @@
 # CausalAtlas — where causal grounding lives
 
 ![license](https://img.shields.io/badge/license-Apache--2.0-green)
+![release](https://img.shields.io/github/v/release/jang1563/causalatlas?label=release)
 ![validation](https://github.com/jang1563/causalatlas/actions/workflows/validate.yml/badge.svg)
 
 **A measurement-first study: when an LLM orchestrates a fallible single-cell perturbation foundation model (FM),
