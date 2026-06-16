@@ -18,6 +18,7 @@ from typing import Iterable
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 STRICT_JSON_FILES = [
+    ".zenodo.json",
     "artifact_manifest.json",
     "schemas/artifact_manifest.schema.json",
     "schemas/layerA_norman.schema.json",

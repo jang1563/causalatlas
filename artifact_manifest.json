@@ -26,6 +26,7 @@
     "claim_map": "docs/CLAIMS.md",
     "reproducibility": "docs/REPRODUCIBILITY.md",
     "data_provenance": "docs/DATA_PROVENANCE.md",
+    "archival_metadata": ".zenodo.json",
     "ci_workflow": ".github/workflows/validate.yml",
     "validator": "scripts/validate_public_release.py",
     "main_writeup": "results/move1/MOVE1_WRITEUP_DRAFT.md",

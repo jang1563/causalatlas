@@ -1,0 +1,41 @@
+{
+  "title": "CausalAtlas: where causal grounding lives in LLM-orchestrated perturbation foundation models",
+  "upload_type": "software",
+  "description": "CausalAtlas is a measurement-first study of causal grounding when a large language model orchestrates a fallible single-cell perturbation foundation model. Across real perturbation data and frontier LLMs, the release maps where grounding comes from and identifies per-input competence/value estimation as the central engineerable bottleneck.",
+  "creators": [
+    {
+      "name": "Kim, JangKeun",
+      "affiliation": "Weill Cornell Medicine"
+    }
+  ],
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "version": "0.1.0",
+  "keywords": [
+    "computational biology",
+    "single-cell genomics",
+    "perturb-seq",
+    "causal inference",
+    "foundation models",
+    "LLM agents",
+    "AI safety",
+    "benchmarking"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/jang1563/causalatlas",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/datasets/jang1563/causalatlas-move1",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://github.com/jang1563/verify-or-trust",
+      "relation": "isReferencedBy",
+      "resource_type": "software"
+    }
+  ]
+}
