@@ -8,7 +8,8 @@ The repository is designed to make three levels easy:
 3. Re-run selected analyses after regenerating inputs from public sources.
 
 Raw third-party single-cell data is not redistributed in this repository. The public
-benchmark substrate used by the Verify-or-Trust layer is hosted separately on Hugging Face.
+Move-1 result artifacts and the Verify-or-Trust benchmark substrate are hosted
+separately on Hugging Face.
 
 ## Public Artifacts
 
@@ -21,6 +22,28 @@ Core entrypoints:
 - `results/move1/layerA_norman.json` -- Norman / GEARS layer-A result artifact.
 - `results/move1/layerA_tahoe.json` -- Tahoe / Arc STATE layer-A result artifact.
 - `results/move1/MOVE1_WRITEUP_DRAFT.md` -- full written account.
+
+Linked public result artifacts:
+
+```bash
+huggingface-cli download jang1563/causalatlas-move1 --repo-type dataset --local-dir causalatlas_move1
+```
+
+Python artifact-loading example:
+
+```python
+import json
+from huggingface_hub import hf_hub_download
+
+path = hf_hub_download(
+    repo_id="jang1563/causalatlas-move1",
+    filename="results/move1/layerA_norman.json",
+    repo_type="dataset",
+)
+
+with open(path) as f:
+    layer_a_norman = json.load(f)
+```
 
 Linked public benchmark data:
 

@@ -13,6 +13,7 @@ checkpoints, or run logs.
 | GEARS | `https://github.com/snap-stanford/GEARS` | Perturbation foundation-model predictions for Norman. The upstream repository is MIT licensed. | Code calls GEARS from the local scientific environment; GEARS checkpoints and regenerated prediction caches are not stored here. |
 | Replogle / Weissman K562 essential screen | public Replogle 2022 Perturb-seq release; local input file expected as `ReplogleWeissman2022_K562_essential.h5ad` | CRISPRi ground-truth pipeline and experiment-selection substrate. | Raw h5ad and regenerated count/covariate matrices are not stored here. |
 | Arc STATE / Tahoe | `https://huggingface.co/arcinstitute/ST-HVG-Tahoe` | Drug perturbation substrate for the Tahoe / Arc STATE layer-A check. | Upstream model/data terms apply, including the model license and acceptable-use policy in the Arc repository. Tahoe raw outputs are not redistributed here. |
+| CausalAtlas Move 1 artifact dataset | `https://huggingface.co/datasets/jang1563/causalatlas-move1` | Lightweight mirror of the public Move-1 result artifacts, schemas, manifest, and documentation. | Contains only release artifacts already allowed in this public repository; no raw third-party data or large regenerated intermediates. |
 | Verify-or-Trust benchmark dataset | `https://huggingface.co/datasets/jang1563/verify-or-trust` | Public packaged substrate for the verification-allocation layer. | Hosted separately on Hugging Face with its own dataset card, provenance notes, and Apache-2.0 metadata for the released derived artifacts. |
 
 ## Transformation Chain
@@ -51,8 +52,10 @@ The public repository includes:
 - `artifact_manifest.json`
 - `schemas/*.json`
 
-The linked Hugging Face dataset includes the derived GEARS/Norman substrate and
-the Norman cell subset needed by the live `run_de` tool in Verify-or-Trust.
+The linked CausalAtlas Move 1 Hugging Face dataset mirrors these lightweight
+release artifacts for direct artifact download. The linked Verify-or-Trust
+Hugging Face dataset includes the derived GEARS/Norman substrate and the Norman
+cell subset needed by the live `run_de` tool in Verify-or-Trust.
 
 ## Not Released Here
 

@@ -15,6 +15,8 @@
     "commit": "cdaa578b6d7227a5242a4c0bdf67881ad361e994"
   },
   "linked_public_artifacts": {
+    "causalatlas_move1_dataset": "https://huggingface.co/datasets/jang1563/causalatlas-move1",
+    "causalatlas_move1_dataset_snapshot": "https://huggingface.co/datasets/jang1563/causalatlas-move1/commit/e476c3b1416a37c13dcb4482f6ddfc43f09e8786",
     "verify_or_trust_repository": "https://github.com/jang1563/verify-or-trust",
     "verify_or_trust_dataset": "https://huggingface.co/datasets/jang1563/verify-or-trust",
     "grounding_atlas_repository": "https://github.com/jang1563/grounding-atlas"
@@ -34,7 +36,8 @@
     "redistributes_third_party_raw_data": false,
     "small_result_artifacts_in_repo": true,
     "raw_data_regenerated_from_public_sources": true,
-    "external_dataset_home": "https://huggingface.co/datasets/jang1563/verify-or-trust"
+    "external_dataset_home": "https://huggingface.co/datasets/jang1563/verify-or-trust",
+    "external_result_artifact_dataset": "https://huggingface.co/datasets/jang1563/causalatlas-move1"
   },
   "claims": [
     {
@@ -263,7 +266,7 @@
   "quality_upgrade_plan": [
     {
       "priority": 1,
-      "item": "Create a dedicated Hugging Face dataset for CausalAtlas Move 1 result artifacts if the result layer grows beyond the Verify-or-Trust benchmark dataset."
+      "item": "Mint a DOI-backed archival snapshot once the next frozen public release is ready."
     }
   ]
 }
