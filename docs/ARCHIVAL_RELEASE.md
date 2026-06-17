@@ -5,9 +5,9 @@ Releases and Zenodo.
 
 ## Current Frozen Release
 
-- Version: `0.1.2`
-- GitHub release: `https://github.com/jang1563/causalatlas/releases/tag/v0.1.2`
-- Canonical revision: Git tag `v0.1.2`
+- Version: `0.1.3`
+- GitHub release: `https://github.com/jang1563/causalatlas/releases/tag/v0.1.3`
+- Canonical revision: Git tag `v0.1.3`
 - Companion artifact dataset: `https://huggingface.co/datasets/jang1563/causalatlas-move1`
 
 The GitHub tag is the canonical software snapshot. The Hugging Face dataset

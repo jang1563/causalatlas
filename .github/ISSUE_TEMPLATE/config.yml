@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: CausalAtlas Move 1 artifacts
+    url: https://huggingface.co/datasets/jang1563/causalatlas-move1
+    about: Download the public result artifacts mirrored on Hugging Face.
+  - name: Verify-or-Trust benchmark data
+    url: https://huggingface.co/datasets/jang1563/verify-or-trust
+    about: Download the linked verification-allocation benchmark dataset.

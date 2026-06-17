@@ -1,0 +1,27 @@
+name: Documentation or provenance correction
+description: Report an unclear claim, provenance note, citation, or release-boundary statement.
+title: "[docs]: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Link or name the file, section, claim ID, or artifact manifest entry.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What should be corrected?
+      description: Describe the ambiguity, missing citation, stale path, or provenance issue.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested wording or evidence
+      description: Optional replacement text, citation, or command that supports the correction.
+    validations:
+      required: false

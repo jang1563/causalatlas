@@ -1,0 +1,39 @@
+name: Reproducibility bug
+description: Report a command, artifact, or validation path that does not work as documented.
+title: "[bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the public release reproducible. Please include enough detail for the failing command or artifact to be checked directly.
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or artifact
+      description: Paste the command, file path, or artifact identifier that failed.
+      placeholder: python3 scripts/validate_public_release.py
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did the documentation or manifest say should happen?
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: What actually happened? Include the relevant error text.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python/R versions, package versions, and whether the issue is local, GitHub, or Hugging Face.
+    validations:
+      required: false
