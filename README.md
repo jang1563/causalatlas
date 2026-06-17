@@ -43,7 +43,8 @@ RL. Agents *exploit* a supplied signal but cannot *self-generate* it; whether ex
 - `docs/CLAIMS.md` — claim-by-claim evidence map for readers and reviewers.
 - `docs/REPRODUCIBILITY.md` — validation levels, expected artifacts, and rerun notes.
 - `docs/DATA_PROVENANCE.md` — source datasets, transformation steps, and redistribution boundaries.
-- `CONTRIBUTING.md` and `SECURITY.md` — contribution and reporting guidelines for the public repository.
+- `CONTRIBUTING.md`, `SUPPORT.md`, `SECURITY.md`, and `CODE_OF_CONDUCT.md` — contribution and reporting
+  guidelines for the public repository.
 - `artifact_manifest.json` — machine-readable map of claims, artifacts, linked datasets, and next quality upgrades.
 - `schemas/` — JSON Schemas for released machine-readable artifacts.
 - `.github/workflows/validate.yml` — CI check for strict JSON, manifest paths, and public-release guards.
