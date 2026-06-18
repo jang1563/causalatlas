@@ -1,21 +1,49 @@
-# CausalAtlas — where causal grounding lives
+# CausalAtlas
 
 ![license](https://img.shields.io/badge/license-Apache--2.0-green)
 ![release](https://img.shields.io/github/v/release/jang1563/causalatlas?label=release)
 ![validation](https://github.com/jang1563/causalatlas/actions/workflows/validate.yml/badge.svg)
 [![HF artifacts](https://img.shields.io/badge/HF-artifacts-yellow)](https://huggingface.co/datasets/jang1563/causalatlas-move1)
 
-**A measurement-first study: when an LLM orchestrates a fallible single-cell perturbation foundation model (FM),
-where does causal "grounding" actually come from — the model, the agent, the RL, or the per-input signal?**
+**A measurement-first research release for asking where causal grounding comes from when an LLM orchestrates a
+fallible single-cell perturbation foundation model (FM): the model, the agent, the RL loop, or the per-input
+reliability signal.**
 
 The headline is a *regime map*, not a flat verdict, and it ends constructively: the bottleneck is a per-input
 reliability/value signal that is **mean-dominated and weak by default — but engineerable**. We measure this across
 five settings on real perturbation data (Norman 2019 / GEARS, Replogle, Tahoe / Arc STATE) and real frontier LLMs.
 
-> The full written account is [`results/move1/MOVE1_WRITEUP_DRAFT.md`](results/move1/MOVE1_WRITEUP_DRAFT.md);
-> the one-page arc is [`results/move1/move1_arc.svg`](results/move1/move1_arc.svg).
-> For navigation, see the human-readable [`docs/CLAIMS.md`](docs/CLAIMS.md) evidence map and the
-> machine-readable [`artifact_manifest.json`](artifact_manifest.json).
+## At a glance
+
+| Reader question | Where to go |
+|---|---|
+| What is the study claiming? | [`docs/CLAIMS.md`](docs/CLAIMS.md) |
+| What is the full narrative account? | [`results/move1/MOVE1_WRITEUP_DRAFT.md`](results/move1/MOVE1_WRITEUP_DRAFT.md) |
+| What can be checked by a script? | [`artifact_manifest.json`](artifact_manifest.json), [`schemas/`](schemas/) |
+| What public artifacts can be downloaded directly? | [CausalAtlas Move 1 HF dataset](https://huggingface.co/datasets/jang1563/causalatlas-move1) |
+| Where is the packaged verification benchmark? | [verify-or-trust](https://github.com/jang1563/verify-or-trust) and its [HF dataset](https://huggingface.co/datasets/jang1563/verify-or-trust) |
+| What data is redistributed here? | No raw third-party data; see [`docs/DATA_PROVENANCE.md`](docs/DATA_PROVENANCE.md) |
+
+## Quick validation
+
+```bash
+python3 scripts/validate_public_release.py
+```
+
+Expected output:
+
+```text
+strict JSON OK
+manifest OK
+tracked file set OK
+public text OK
+```
+
+Download the mirrored lightweight artifacts:
+
+```bash
+huggingface-cli download jang1563/causalatlas-move1 --repo-type dataset --local-dir causalatlas_move1
+```
 
 ## The arc (five measured settings)
 1. **Does the FM ground causation?** Only narrowly. On an interpolation-proof held-out with a magnitude-robust
