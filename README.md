@@ -13,6 +13,15 @@ The headline is a *regime map*, not a flat verdict, and it ends constructively: 
 reliability/value signal that is **mean-dominated and weak by default — but engineerable**. We measure this across
 five settings on real perturbation data (Norman 2019 / GEARS, Replogle, Tahoe / Arc STATE) and real frontier LLMs.
 
+<p align="center">
+  <a href="results/move1/move1_arc.svg">
+    <img src="results/move1/move1_arc.svg" width="760" alt="CausalAtlas Move 1 visual abstract: five measured limits converge on the per-input competence and value signal as the deployable lever for grounded perturbation-biology orchestration.">
+  </a>
+</p>
+<p align="center">
+  <sub><strong>Visual abstract.</strong> Five measured settings converge on one deployable recipe: default to the free additive baseline, flag FM disagreement, and verify the highest-value uncertain cases.</sub>
+</p>
+
 ## At a glance
 
 | Reader question | Where to go |
